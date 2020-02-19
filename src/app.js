@@ -3,7 +3,8 @@ const express=require('express')
 const hbs=require('hbs')
 const geocode=require('./utils/geocode')
 const forecast= require('./utils/weather')
-const app=express()   
+const app=express() 
+const port=process.env.PORT || 3000  
 //define path for express config          
 const publicDirectoryPath=path.join(__dirname,'../public')
 const viewsPath=path.join(__dirname,'../templates/views') /*seting up the path of templates as ii can't  recognised
@@ -73,13 +74,13 @@ app.get('*',(req,res)=>{    // matches to everythng not matched,* matches to eve
        name:'Kunal Gupta'
    })
 })
-app.listen(3000,(err)=>{                  
+app.listen(port,(err)=>{                  
     if(err){        
         console.log("something went wrong")
     }
     else
     {
-        console.log("yup, my server is running on port:3000")
+        console.log("yup, my server is running on port:"+port)
     }
 
 })

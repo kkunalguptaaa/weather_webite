@@ -15,7 +15,7 @@ submit.addEventListener('click',(e)=>{
     msg2.textContent="" 
     const location=search.value
     e.preventDefault()
-    fetch('http://localhost:3000/weather?address='+location).then((Response)=>{
+    fetch('/weather?address='+location).then((Response)=>{
       
         Response.json().then((data)=>{
             if(data.error){
