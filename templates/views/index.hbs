@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>first server</title>
+     
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <div class="flex-container">
+            {{>header}}
+            <h2>This is home page!</h2>  
+            <form>
+                <input id="address" style="font-family:cursive"placeholder="Location"  type="text">
+                <button id="btn" style="font-family:cursive">Search</button> 
+            </form>      
+            <p id="msg1"></p>
+            <p id="msg2"></p>  
+        </div>
+          {{>footer}}
+          <script src="/js/fetchApi.js"></script>
+    </body>
+</html>
