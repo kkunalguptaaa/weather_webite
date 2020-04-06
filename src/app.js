@@ -1,4 +1,4 @@
-const path=require('path')  
+const path=require('path')  //this is a node core module so we do not have any need to install it
 const express=require('express') 
 const hbs=require('hbs')
 const geocode=require('./utils/geocode')
@@ -6,7 +6,8 @@ const forecast= require('./utils/weather')
 const app=express() 
 const port=process.env.PORT || 3000  
 //define path for express config          
-const publicDirectoryPath=path.join(__dirname,'../public')
+const publicDirectoryPath=path.join(__dirname,'../public')  /*defing path of public directory so that public
+                                                            directory can be served up!*/
 const viewsPath=path.join(__dirname,'../templates/views') /*seting up the path of templates as ii can't  recognised
                                                          as default  name like views*/
 const partialsPath=path.join(__dirname,'../templates/partials')
