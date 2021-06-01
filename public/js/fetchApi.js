@@ -25,7 +25,6 @@ submit.addEventListener('click',(e)=>{
             else{
                 msg1.textContent=data.location
                 msg2.textContent=data.forecast
-
             }
         
     })
